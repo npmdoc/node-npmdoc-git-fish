@@ -1,0 +1,404 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/jmervine/node-git-fish"
+
+    >git-fish (v0.0.6)</a>
+</h1>
+<h4>Github Web Hook Listener</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.git-fish">module git-fish</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">git-fish.</span>logger</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.git-fish.logger">module git-fish.logger</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">git-fish.logger.</span>emitErrs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">git-fish.logger.</span>exitOnError</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">git-fish.logger.</span>padLevels</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">git-fish.logger.</span>stripColors</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.git-fish.logger.debug">
+            function <span class="apidocSignatureSpan">git-fish.logger.</span>debug
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.git-fish.logger.error">
+            function <span class="apidocSignatureSpan">git-fish.logger.</span>error
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.git-fish.logger.info">
+            function <span class="apidocSignatureSpan">git-fish.logger.</span>info
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.git-fish.logger.silly">
+            function <span class="apidocSignatureSpan">git-fish.logger.</span>silly
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.git-fish.logger.verbose">
+            function <span class="apidocSignatureSpan">git-fish.logger.</span>verbose
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.git-fish.logger.warn">
+            function <span class="apidocSignatureSpan">git-fish.logger.</span>warn
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">git-fish.logger.</span>_eventsCount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">git-fish.logger.</span>_events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">git-fish.logger.</span>_hnames</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">git-fish.logger.</span>_names</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">git-fish.logger.</span>domain</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">git-fish.logger.</span>exceptionHandlers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">git-fish.logger.</span>levels</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">git-fish.logger.</span>profilers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">git-fish.logger.</span>rewriters</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">git-fish.logger.</span>transports</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">git-fish.logger.</span>level</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.git-fish" id="apidoc.module.git-fish">module git-fish</a></h1>
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.git-fish.logger" id="apidoc.module.git-fish.logger">module git-fish.logger</a></h1>
+
+
+
+
+
+
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.git-fish.logger.debug" id="apidoc.element.git-fish.logger.debug">
+        function <span class="apidocSignatureSpan">git-fish.logger.</span>debug
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">debug = function (msg) {
+  // build argument list (level, msg, ... [string interpolate], [{metadata}], [callback])
+  var args = [level].concat(Array.prototype.slice.call(arguments));
+  target.log.apply(target, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.git-fish.logger.error" id="apidoc.element.git-fish.logger.error">
+        function <span class="apidocSignatureSpan">git-fish.logger.</span>error
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">error = function (msg) {
+  // build argument list (level, msg, ... [string interpolate], [{metadata}], [callback])
+  var args = [level].concat(Array.prototype.slice.call(arguments));
+  target.log.apply(target, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *  this works.
+ ***/
+
+var config;
+try {
+    config = require(path.resolve(process.env.TEST_CONFIG||argv.config||&#x27;config.json&#x27;));
+} catch (e) {
+    console.<span class="apidocCodeKeywordSpan">error</span>(&#x27;RTFM yo! You need a config file!&#x27;);
+    console.trace(e);
+    process.exit(1);
+}
+
+config.port = process.env.TEST_PORT || argv.port || config.port || 8000;
+
+var server = http.createServer(function (request, response) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.git-fish.logger.info" id="apidoc.element.git-fish.logger.info">
+        function <span class="apidocSignatureSpan">git-fish.logger.</span>info
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">info = function (msg) {
+  // build argument list (level, msg, ... [string interpolate], [{metadata}], [callback])
+  var args = [level].concat(Array.prototype.slice.call(arguments));
+  target.log.apply(target, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.git-fish.logger.silly" id="apidoc.element.git-fish.logger.silly">
+        function <span class="apidocSignatureSpan">git-fish.logger.</span>silly
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">silly = function (msg) {
+  // build argument list (level, msg, ... [string interpolate], [{metadata}], [callback])
+  var args = [level].concat(Array.prototype.slice.call(arguments));
+  target.log.apply(target, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.git-fish.logger.verbose" id="apidoc.element.git-fish.logger.verbose">
+        function <span class="apidocSignatureSpan">git-fish.logger.</span>verbose
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">verbose = function (msg) {
+  // build argument list (level, msg, ... [string interpolate], [{metadata}], [callback])
+  var args = [level].concat(Array.prototype.slice.call(arguments));
+  target.log.apply(target, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.git-fish.logger.warn" id="apidoc.element.git-fish.logger.warn">
+        function <span class="apidocSignatureSpan">git-fish.logger.</span>warn
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">warn = function (msg) {
+  // build argument list (level, msg, ... [string interpolate], [{metadata}], [callback])
+  var args = [level].concat(Array.prototype.slice.call(arguments));
+  target.log.apply(target, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+response.end(&#x27;Application Error 500\n&#x27;);
+return;
+        }
+
+        var branch = config[endpoint].branch;
+        if (branch) {
+var skip = function() {
+    console.<span class="apidocCodeKeywordSpan">warn</span>(&#x27;Skipping request:\n -&#x3e; %s doesn\&#x27;t match %s&#x27;, ref
+, branch);
+    response.writeHead(200, {&#x27;Content-Type&#x27;: &#x27;text/plain&#x27;});
+    response.end();
+};
+
+if (Array.isArray(branch)) {
+    if (!branch.some(function(i) { return ref.match(i) })) return skip();
+} else {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
