@@ -1,4 +1,7 @@
-# api documentation for  [git-fish (v0.0.6)](https://github.com/jmervine/node-git-fish)  [![npm package](https://img.shields.io/npm/v/npmdoc-git-fish.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-git-fish) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-git-fish.svg)](https://travis-ci.org/npmdoc/node-npmdoc-git-fish)
+# npmdoc-git-fish
+
+#### basic api documentation for  [git-fish (v0.0.6)](https://github.com/jmervine/node-git-fish)  [![npm package](https://img.shields.io/npm/v/npmdoc-git-fish.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-git-fish) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-git-fish.svg)](https://travis-ci.org/npmdoc/node-npmdoc-git-fish)
+
 #### Github Web Hook Listener
 
 [![NPM](https://nodei.co/npm/git-fish.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/git-fish)
